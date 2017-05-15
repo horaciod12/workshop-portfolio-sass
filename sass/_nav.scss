@@ -1,0 +1,79 @@
+nav {
+	width: 100%;
+	background: $color-nav-foot;
+	color: #fff;
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+        h2 {
+            font-size: 30px;
+            padding: 15px;
+        }
+        input {
+           display: none;
+        }
+        label {
+            display: none;
+        }
+            a {
+                text-decoration: none;
+                font-size: 15px;
+                color: #fff;
+                padding: 15px;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav {
+        .contenedor {
+            label {
+                display: block;
+                border: 0.1px solid white;
+                @include border-radius(5px);
+                padding: 10px;
+                font-size: 15px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                cursor: pointer;
+                margin-right: 10px;
+                text-align: center;
+                span {
+                    display: inline-block;	
+                    font-size: 18px;
+                    width: 18px;
+                    height: 18px;
+                    text-align: center;
+                    vertical-align: text-top;
+                    margin-left: 1px;
+                    margin-top: 1px;
+                }
+            }
+            ul {
+                display: flex;
+                position: absolute;
+                top: 60px;
+                width: 100%;
+                background: rgba(44,62,80,0.8);
+                left: -100%;
+                transition: all 0.4s;
+                li {
+                    width: 100%;
+                    border-bottom: 0.5px solid white;
+                    a {
+                        display: block;
+                        border-top: 0.5px solid white;
+                        &:hover {
+                            background: rgba(44,62,80,0.7);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

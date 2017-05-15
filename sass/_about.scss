@@ -1,0 +1,58 @@
+.about {
+    width: 100%;
+    background: $color-section;
+	color: #fff;
+    display: flex;
+    .text1 {
+        display: flex;
+        justify-content: center;
+        div {
+            width: 30%;
+            padding: 10px;
+            p {
+                line-height: 22px;
+                text-align: left;
+                margin-bottom: 30px;
+            }
+        }
+    }
+            
+    .contenedor3 {
+        display: flex;
+        justify-content: center;
+        .boton {
+            padding: 15px;
+            margin-bottom: 75px;
+            border: 1px solid white;
+            @include border-radius(5px);
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Open Sans', sans-serif;
+            display: inline-block;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .about {
+        .text1 {
+            display: flex;
+            flex-wrap: wrap;
+            div {
+                 display: block;
+                 width: 90%;
+                 padding-bottom: 0;
+                p {
+                    font-size: 18px;
+                    margin-bottom: auto;
+                }
+            }
+        }
+        .contenedor3 {
+            .boton {
+                margin-top: 30px;
+            }
+        }
+    }
+}

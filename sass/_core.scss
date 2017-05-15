@@ -1,0 +1,63 @@
+.contenedor {
+	max-width: 1200px;
+	margin: auto;
+    width: 99%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+section h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 76px;
+    padding-bottom: 5px;
+}
+
+section span {
+    display: block;
+    text-align: center;
+}
+
+.linea1::before {
+	content: "";
+    font-size: 2px;
+    width: 100px;
+    height: 4px;
+    display: inline-block;
+    margin-bottom: 6px;
+    background: #fff;
+}
+
+.linea1::after {
+	@extend .linea1::before;
+}
+
+.linea2::before {
+	@extend .linea1::before;
+    background: #000;
+}
+
+.linea2::after {
+	@extend .linea2::before;
+}
+
+.ion-android-star {
+	font-size: 30px;
+	display: inline-block;
+}
+
+@mixin border-radius($radio) {
+	-ms-border-radius: $radio;
+	-webkit-border-radius: $radio;
+	-moz-border-radius: $radio;
+	-o-border-radius: $radio;
+	border-radius: $radio;
+}
